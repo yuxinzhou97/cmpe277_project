@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "cmpe285_project"
+rootProject.name = "cmpe277_project"

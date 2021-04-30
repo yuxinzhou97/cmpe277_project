@@ -1,4 +1,4 @@
-package com.example.cmpe285_project;
+package com.example.cmpe277_project;
 
 import android.content.Context;
 

@@ -23,6 +23,15 @@
         android:text="Search"
         android:padding="10dp"
         android:id="@+id/btn_search"/>
+<!--    <Button-->
+<!--        android:layout_marginLeft="60dp"-->
+<!--        android:layout_marginRight="60dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15sp"-->
+<!--        android:text="Shop by Category"-->
+<!--        android:padding="10dp"-->
+<!--        android:id="@+id/btn_category"/>-->
 
     <Button
         android:layout_marginLeft="60dp"
@@ -33,6 +42,16 @@
         android:text="List An Item To Sell"
         android:padding="10dp"
         android:id="@+id/btn_list_item"/>
+
+    <Button
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="Manage My Listings"
+        android:padding="10dp"
+        android:id="@+id/btn_my_listings"/>
 
 
     <Button

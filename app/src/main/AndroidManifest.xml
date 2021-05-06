@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cmpe277_project">
-        <activity android:name=".ProductDisplayActivity"></activity>
+        <activity android:name=".EditListingActivity"></activity>
+        <activity android:name=".MyListingsActivity" />
+        <activity android:name=".ProductDisplayActivity" />
         <activity android:name=".ListingActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".LoginActivity" />

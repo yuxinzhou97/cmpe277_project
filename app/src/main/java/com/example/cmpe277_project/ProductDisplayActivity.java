@@ -30,10 +30,13 @@ public class ProductDisplayActivity extends AppCompatActivity {
     private EditText et_search;
     private DatabaseReference databaseReference;
     private ArrayList<ProductInformation> productList;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_display);
+
         btn_back_to_menu = findViewById(R.id.btn_back_to_menu);
         rv_display = findViewById(R.id.rv_display);
         btn_search_submit = findViewById(R.id.btn_search_submit);

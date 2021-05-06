@@ -15,20 +15,22 @@
         android:src="@drawable/ic_baseline_sell_24"/>
 
     <EditText
+        android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:hint="Email"
         android:padding="10dp"
-        android:id="@+id/et_email"/>
+        android:text="" />
 
     <EditText
+        android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:hint="Password"
         android:padding="10dp"
-        android:id="@+id/et_password"/>
+        android:text="" />
 
     <Button
         android:layout_width="match_parent"

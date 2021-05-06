@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/listing_layout"
     tools:context=".ListingActivity">
 
     <ImageView
@@ -91,5 +92,13 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         app:backgroundTint="#C5CAE9" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/circular_indicator"
+        android:layout_below="@id/btn_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="180dp"
+        />
 
 </RelativeLayout>

@@ -22,11 +22,21 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     private ArrayList<ProductInformation> itemList;
     private Context context;
+    private RecyclerViewClickInterface recyclerViewClickInterface;
+    private boolean clickable = false;
 
     public CustomAdapter(ArrayList<ProductInformation> productList, Context context) {
         this.itemList = productList;
         this.context = context;
     }
+
+    public CustomAdapter(ArrayList<ProductInformation> productList, Context context, RecyclerViewClickInterface recyclerViewClickInterface) {
+        this.itemList = productList;
+        this.context = context;
+        this.recyclerViewClickInterface = recyclerViewClickInterface;
+        this.clickable = true;
+    }
+
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -42,7 +52,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         holder.description.setText(item.getDescription());
         holder.price.setText(item.getPrice());
 
-        // Picasso.get().load(Uri.parse(item.getUrl())).into(holder.imageView);
         // Glide library
         Glide.with(context).load(item.getUrl()).into(holder.imageView);
 
@@ -68,6 +77,28 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             price = view.findViewById(R.id.tv_price);
             description= view.findViewById(R.id.tv_description);
             item_layout = view.findViewById(R.id.item_layout);
+
+            // new
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (clickable) {
+                        recyclerViewClickInterface.onItemClick(getAdapterPosition());
+                        System.out.println("clicked");
+                    }
+
+                }
+            });
+            view.setOnLongClickListener(new View.OnLongClickListener() {
+                public boolean onLongClick(View arg0) {
+                    if (clickable) {
+                        recyclerViewClickInterface.onItemClick(getAdapterPosition());
+                        System.out.println("long clicked");
+                    }
+                    return true;
+                }
+            });
+
 
         }
     }

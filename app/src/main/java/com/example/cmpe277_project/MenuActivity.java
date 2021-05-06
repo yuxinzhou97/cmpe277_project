@@ -17,6 +17,10 @@ public class MenuActivity extends AppCompatActivity {
     private Button btn_logout;
     private Button btn_list_item;
     private Button btn_search;
+    // private Button btn_category;
+    private Button btn_my_listings;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +29,11 @@ public class MenuActivity extends AppCompatActivity {
         btn_logout = findViewById(R.id.btn_logout);
         btn_list_item = findViewById(R.id.btn_list_item);
         btn_search = findViewById(R.id.btn_search);
+        // btn_category = findViewById(R.id.btn_category);
+        btn_my_listings = findViewById(R.id.btn_my_listings);
+
+
+
 
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +59,16 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MenuActivity.this, ProductDisplayActivity.class));
+                finish();
+            }
+        });
+
+
+
+        btn_my_listings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this, MyListingsActivity.class));
                 finish();
             }
         });
